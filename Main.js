@@ -1,1 +1,32 @@
-var Input1; ext._shutdown = function() {};ext._getStatus = function() { return {status: 2, msg: 'Ready'};}; ext.BlockBit = function (a,callback){ alert("Hello!") }; var descriptor = { blocks: [ [" ","( JavaScript)","BlockBit"],],menus: {},url: 'https://kyleplo.github.io/scratch-extension-creator/help#'Hello!};ScratchExtensions.register('BlockBit', descriptor, ext);
+class NitroBlock {
+    getInfo() {
+        return {
+            "id": "BlockBit",
+            "name": "BlockBit",
+            "blocks": [{
+                    "opcode": "substringy",
+                    "blockType": "reporter",
+                    "text": "letters [num1] through [num2] of [string]",
+                    "arguments": {
+                        "num1": {
+                            "type": "number",
+                            "defaultValue": "2"
+                        },
+                        "num2": {
+                            "type": "number",
+                            "defaultValue": "5"
+                        },
+                        "string": {
+                            "type": "string",
+                            "defaultValue": "hello world"
+                        }
+                    }
+                },
+            }],
+        "menus": {
+        }
+    };
+    substringy({num1, num2, string}) {
+        return string.substring(num1 - 1, num2);
+    };
+}
