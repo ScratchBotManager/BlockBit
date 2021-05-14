@@ -1,4 +1,4 @@
-class NitroBlock {
+class BlockBit {
     getInfo() {
         return {
             "id": "BlockBit",
